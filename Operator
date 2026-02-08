@@ -1,0 +1,34 @@
+## Operators
+- Operators in javaScript are symbol that perform operations on data and variables they are essential for task like calculations, comparison and logical decision.
+Arithmetic Operators
++   // addition
+-   // subtraction
+*   // multiplication
+/   // division
+%   // modulus (remainder)
+
+Assignment Operators
+=    // assign
++=   // add and assign
+-=   // subtract and assign
+*=   // multiply and assign
+/=   // divide and assign
+
+Comparison Operators
+==   // equal to
+===  // strict equal (value + type)
+!=   // not equal
+!==  // strict not equal
+>    // greater than
+<    // less than
+>=   // greater than or equal
+<=   // less than or equal
+
+Logical Operators
+&&   // AND
+||   // OR
+!    // NOT
+
+Increment / Decrement
+++   // increment
+--   // decrement
