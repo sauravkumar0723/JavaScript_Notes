@@ -1,0 +1,15 @@
+### Variables
+- A variable is a name given to memory allocation which is Store the data read the data and retrieve the data.
+** Types of Variables.
+    1. Var:- in adder way of declaring variables. it's avoided the modern JavaScript due to pointer issue.
+    2. let :- used to declare a variable that can be assigned.
+    3. const :-  used for variables whose value not change.
+- Notes :-
+      - Var can be redaclere
+      - Var can reassign
+  --  
+  - let can't be redaclere
+  - let can be reassign
+ -- 
+   - const cann't be reassign and redaclere
+   -  const is fixwd.
