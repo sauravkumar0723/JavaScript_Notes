@@ -1,0 +1,66 @@
+### Functions
+- A function is a block of code that perform specific task. it allow you to write the steps once and then call the function whenever you need to perform task.
+- Functions are important because they help to avoid repetition,Organise code and simply task by break them down in to smaller parts.
+- By using functions make code reusable,more readable and efficeint.
+** Basic structure of a function.
+   1. Function keyword (function) – Used to define a function.
+   2. Function name – Identifies the function.
+   3. Parameters – Values passed to the function (optional).
+   4. Function body – Block of code that runs when the function is called.
+   5. Return statement – Sends a value back from the function (optional).
+Example:- 
+function functionName(parameters) {
+  // function body
+  // statements
+  return value; // optional
+}
+
+** Important Points
+ - Defining a function is when you write the actual code that describes what the function does. For example, using the function keyword or an arrow function to create the function logic.
+             function greet() {
+                 console.log("Hello, World!")
+               }
+ - Calling a function is when you actually execute that function, telling the program to run the code inside it. For example, writing greet() to actually run the greet function.
+                 greet(); // Output :- Hello, world!
+
+- Parameter:- parameters are the names used in a function definition to represent the values that will be passed into the function. They act as placeholders for the arguments that you provide when you call the function.
+
+** function decleration :- 
+     - function decleration define a function with specific name and can be called before they are defined in this code due to hosting.
+** Function Expression:- 
+    -  Function expression define functions and assign it to a variable. they are not hoisted so they can only be called after they are defined.
+
+### Types of Function
+
+- 1. // function  with no parameter and without return value
+function addNumber() {
+  let a = 10;
+  let b = 20;
+  let sum = a + b;
+  console.log("Sum is:", sum);
+}
+addNumbers(); // Output: sum is :30
+
+- 2. // functions with input and No Output
+function addNumbers(a, b) {
+  let sum = a+ b;
+  console.log("sum is ", sum);
+}
+addNumbers(10,40);
+
+- 3.  // functions with no input and output
+function addNumbers() {
+  let a = 10;
+  let b = 30;
+  let sum = a + b;
+}
+console.log(addNumbers());
+
+- 4. // functions with input and Output
+function addNumbers(a, b) {
+  let sum = a + b;
+  return sum;
+}
+var res = addNumbers(50,50);
+console.log(res);
+
