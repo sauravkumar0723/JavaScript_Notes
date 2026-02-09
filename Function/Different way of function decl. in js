@@ -1,0 +1,87 @@
+### Different way of Decleraing funtions in JavaScript.
+1. Function Declaration (Hoisted)
+function add(a, b) {
+  return a + b;
+}
+console.log(add(2, 3)); // 5
+**  Key points
+- Hoisted (you can call it before it’s defined)
+- Best for general-purpose functions
+
+2. Function Expression
+const add = function(a, b) {
+  return a + b;
+};
+console.log(add(2, 3)); // 5
+*Key points:-
+- Stored in a variable
+- Not hoisted
+- Useful when passing functions as values
+
+3. Arrow Function (ES6)
+const add = (a, b) => {
+  return a + b;
+};
+Shorter version:
+const add = (a, b) => a + b;
+
+Key points:-
+Clean and modern
+No this binding of its own
+
+Very common in React, callbacks, array methods
+4. Anonymous Function
+setTimeout(function() {
+  console.log("Hello");
+}, 1000);
+
+** Key points:-
+Function without a name
+Used where the function is needed only once
+
+5. Named Function Expression
+const factorial = function fact(n) {
+  if (n === 1) return 1;
+  return n * fact(n - 1);
+};
+** Key points
+- Function has a name internally
+- Helpful for recursion and debugging
+
+6. Immediately Invoked Function Expression (IIFE)
+(function() {
+  console.log("I run immediately");
+})();
+Arrow version:
+(() => {
+  console.log("IIFE with arrow");
+})();
+
+Key points
+Runs immediately
+- Creates its own scope
+- Used earlier to avoid global pollution
+
+7. Constructor Function (Not Recommended Often)
+- const add = new Function("a", "b", "return a + b");
+- console.log(add(2, 3));
+
+** Key points:- 
+- Functions created at runtime
+- Slower and risky (like eval)
+- Rarely used in real projects
+
+8. Method in an Object
+const calculator = {
+  add(a, b) {
+    return a + b;
+  }
+};
+console.log(calculator.add(2, 3));
+Quick Comparison
+Type	Hoisted	Has own this
+Function Declaration	✅ Yes	✅ Yes
+Function Expression	❌ No	✅ Yes
+Arrow Function	❌ No	❌ No
+IIFE	❌ No	Depends
+Method	❌ No	✅ Yes
