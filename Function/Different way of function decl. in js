@@ -31,7 +31,7 @@ Key points:-
 - No this binding of its own
 
 4. Anonymous Function
-setTimeout(function() {
+  setTimeout(function() {
   console.log("Hello");
 }, 1000);
 
@@ -40,7 +40,7 @@ setTimeout(function() {
 - Used where the function is needed only once
 
 5. Named Function Expression
-const factorial = function fact(n) {
+ const factorial = function fact(n) {
   if (n === 1) return 1;
   return n * fact(n - 1);
 };
