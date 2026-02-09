@@ -4,6 +4,7 @@ function add(a, b) {
   return a + b;
 }
 console.log(add(2, 3)); // 5
+
 **  Key points
 - Hoisted (you can call it before it’s defined)
 - Best for general-purpose functions
@@ -26,18 +27,17 @@ Shorter version:
 const add = (a, b) => a + b;
 
 Key points:-
-Clean and modern
-No this binding of its own
+- Clean and modern
+- No this binding of its own
 
-Very common in React, callbacks, array methods
 4. Anonymous Function
 setTimeout(function() {
   console.log("Hello");
 }, 1000);
 
 ** Key points:-
-Function without a name
-Used where the function is needed only once
+- Function without a name
+- Used where the function is needed only once
 
 5. Named Function Expression
 const factorial = function fact(n) {
