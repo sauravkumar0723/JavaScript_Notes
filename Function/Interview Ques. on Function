@@ -1,0 +1,78 @@
+### Some Important Question on interview
+Q1. What is a function in JavaScript?
+
+Answer:
+A function in JavaScript is a reusable block of code that performs a specific task. It helps reduce code duplication and improves readability. Functions can take inputs (parameters) and may return a value.
+function add(a, b) {
+  return a + b;
+}
+
+Q2. Difference between function declaration and function expression?
+Answer:
+A function declaration is hoisted, meaning it can be called before it is defined.
+A function expression is not hoisted and is stored in a variable.
+// Function Declaration
+function greet() {
+  console.log("Hello");
+}
+// Function Expression
+const greet = function() {
+  console.log("Hello");
+};
+
+Q3. What is hoisting in functions?
+
+Answer:
+Hoisting is JavaScript’s behavior of moving function declarations to the top of their scope during execution. Only function declarations are hoisted, not function expressions or arrow functions.
+Q4. What is an arrow function?
+Answer:
+An arrow function is a shorter syntax for writing functions introduced in ES6. It does not have its own this and is commonly used for callbacks.
+const sum = (a, b) => a + b;
+Q5. Difference between arrow function and normal function?
+Answer:
+Arrow functions do not have their own this, arguments, or prototype, while normal functions do. Arrow functions are not hoisted.
+Q6. What is a callback function?
+Answer:
+A callback function is a function that is passed as an argument to another function and executed later.
+function greet(name, callback) {
+  callback();
+  console.log(name);
+}
+greet("Saurav", () => console.log("Hello"));
+
+Q7. What is a higher-order function?
+Answer:
+A higher-order function is a function that either takes another function as an argument or returns a function.
+Example: map(), filter(), reduce().
+Q8. What is a closure?
+Answer:
+A closure is created when a function remembers variables from its outer scope even after the outer function has finished executing.
+function outer() {
+  let count = 0;
+  return function inner() {
+    count++;
+    return count;
+  };
+}
+
+Q9. What happens if a function does not return anything?
+Answer:
+If a function does not return a value explicitly, JavaScript returns undefined by default.
+Q10. What is the this keyword in JavaScript?
+Answer:
+this refers to the object that is calling the function. Its value depends on how the function is invoked.
+Q11. Output-based Question
+console.log(add(2, 3));
+function add(a, b) {
+  return a + b;
+}
+Answer:
+Output will be 5 because function declarations are hoisted.
+Q12. Tricky Question
+const add = (a, b) => {
+  return
+  a + b;
+};
+console.log(add(2, 3));
+Answer:
+Output is undefined because JavaScript inserts a semicolon after return.
