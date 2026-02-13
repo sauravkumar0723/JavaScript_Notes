@@ -1,0 +1,77 @@
+###  
+What is Hoisting?
+- Hoisting is JavaScript's default behavior of moving variable and function declarations to the top of their scope during the compilation phase.
+Before the code executes:
+- Memory is allocated for variables.
+- Memory is allocated for functions.
+- Variable values are assigned later during execution.
+
+--------------  JavaScript Execution Phases---------------
+JavaScript runs code in two phases:
+1️--- Memory Creation Phase
+var → initialized with undefined
+let and const → memory allocated but not initialized
+Function declarations → entire function stored in memory
+--- Execution Phase
+Code runs line by line
+Values are assigned to variables
+
+---  Hoisting with var
+console.log(a);
+var a = 10;
+ Internally JavaScript treats it as:
+var a;            // memory allocated (undefined)
+console.log(a);   // undefined
+a = 10;
+ Output:
+undefined
+
+
+✔ var is hoisted
+✔ Default value is undefined
+
+/ Hoisting with let
+console.log(a);
+let a = 10;
+
+ Output:
+ReferenceError: Cannot access 'a' before initialization
+ Reason:
+-----    let is hoisted but stays in the Temporal Dead Zone (TDZ) until it is initialized.
+
+**** Hoisting with const
+console.log(a);
+const a = 10;
+ Output:
+ReferenceError: Cannot access 'a' before initialization
+✔ const is hoisted
+✔ It remains in the Temporal Dead Zone
+✔ Initialization is mandatory
+
+==== Function Hoisting
+greet();
+
+function greet() {
+  console.log("Hello");
+}
+// Output:
+Hello
+
+- Function declarations are fully hoisted.
+=== Function Expression (Not Fully Hoisted)
+greet();
+var greet = function() {
+  console.log("Hello");
+};
+// Output:
+TypeError: greet is not a function
+ -- Only the variable is hoisted (undefined), not the function definition.
+--  Temporal Dead Zone (TDZ)
+- The Temporal Dead Zone is the time between:
+- When a variable is hoisted (memory allocated)
+- And when it is initialized
+- During this time, accessing the variable causes a ReferenceError.
+Applies to:
+let
+
+const
