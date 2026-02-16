@@ -1,0 +1,78 @@
+// Array
+// ----> an array in JS is a list like object used to store mulltiple values under a single variable
+// -> each item an array called element has index positions starting from 0.
+// -> Arrays are ideal for managing lists collections or group of related data
+
+const myArr = [0,1,2,3,4,5];
+// acess through indexing
+console.log(myArr[3]);
+
+const myHeros = ["shaktiman", "Raju", "Balu"];
+console.log(myHeros[1]);
+
+
+// Array methods
+// push is used for add one or more element in the end of the array
+myArr.push(6)
+console.log(myArr);
+
+// unshift
+// Add one or more elements to the begining of the array
+myArr.unshift(9)
+console.log(myArr);
+
+// shift
+// REmove the first elemnt of the array
+myArr.shift()
+console.log(myArr);
+
+// pop
+//-> remove last element of the arrray
+myArr.pop();
+console.log(myArr);
+
+const newArr = myArr.join()
+console.log(myArr);
+console.log(newArr);
+
+// Array searching and sorting.
+// check if array is contains a specific elements
+console.log(myArr.includes(10));
+// Returns  the first index of a specified element-1 if not found
+console.log(myArr.indexOf(3));
+// sort-> array is sort aur not
+console.log(myArr);
+// revers -> Reverse the element in the array
+
+// v.v.i modified and Acessing element in the array
+// slice & splice
+// slice 
+// => Returns a  shallow copy  of portimn of an any without modiy=fying the original array 
+console.log("A ", myArr);
+const myn1 = myArr.slice(1, 3)
+console.log(myn1);
+
+console.log("B ", myArr);
+
+// splice
+// -> in Js is powerful tool for ading, removeing or replacing elements in an array at specific positions the syntax of splice look like this
+// array.splice(start,deletecount, items, items2---)
+// start-> the index at which to begin modifying the array 
+// deletions=> the number of elements to remove starrting from the start index 
+// item1- item 2 => the elemetns to add in to the array of start positions
+const myn2 = myArr.splice(1, 3)
+console.log(myn2);
+
+
+
+// Array iterations and methods
+// for each => excutes a funcioms once for each array element 
+
+const marvel_heros =["thor", "Ironman", "spiderman"]
+const dc_heors = ["superman", "flash", "batman"]
+marvel_heros.push(dc_heors)
+console.log(marvel_heros);
+// Spread operator(....)
+const all_newHeros = [...marvel_heros, ...dc_heors]
+console.log(all_newHeros);
+
