@@ -1,0 +1,6 @@
+// Spread Operator or RestOperator
+function calculateCartPrice(...num)
+{
+    return num
+}
+console.log(calculateCartPrice(200, 400, 500, 200, 6000))
