@@ -75,3 +75,27 @@ Applies to:
 let
 
 const
+
+
+
+----------------------- ***************___________________
+Memory View
+Creation Phase (Memory Allocation)
+
+var a        → undefined
+let b        → TDZ
+const c      → TDZ
+function sum → full function stored
+
+Execution Phase
+
+a = 10
+b = 20
+c = 30
+
+var vs let vs const (Hoisting)
+console.log(a); // undefined
+var a = 10;
+
+console.log(b); // ReferenceError
+let b = 20;
