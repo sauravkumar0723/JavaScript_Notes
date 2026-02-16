@@ -1,0 +1,62 @@
+// Objects 
+// singleton->jab bhi hm literals ki tarah declare krthe hai tb singleton nhi banta hai 
+// object.create
+
+
+// objects literals
+// creating an Objects 
+// --> object will be creating of const  ---? object hamesa const ke use se banega
+
+const JsUser = {
+    name: "Saurav",
+    // [mySym]: "myKey1",
+    lastname: "Sharma",
+    age: "26",
+    hobby: "Developer",
+}
+// 1st way to Acess Objects but this is not right way
+console.log(JsUser.name);
+console.log(JsUser.lastname);
+console.log(JsUser.age);
+console.log(JsUser.hobby);
+
+// // 2nd way
+//  console.log(JsUser["age"])
+
+//  // Symbol declare
+//  const mySym = Symbol("Key1")
+
+//class-> 
+class Car {
+    constructor(brand,name) {
+        this.brand = brand;
+        this.color = this.color;
+    }
+    start(){
+        console.log(this.brand + "is Starting-----");
+    }
+}
+// creating objects
+const car1 = new Car("Tesla", "red");
+const car2 = new Car("Honda", "Blue");
+
+console.log(car1.brand)
+console.log(car2.brand);
+car1.start();
+
+
+/// practice creating a object 
+const Vehicle = {
+    carname: "tesla",
+    color: "Red",
+}
+console.log(Vehicle.carname);
+
+
+
+
+
+
+
+
+------------------------
