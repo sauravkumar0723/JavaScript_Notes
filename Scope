@@ -1,0 +1,21 @@
+// Scope->
+// it is a define where you can acess variables or functions in your code 
+//  type of scope
+// global scope:- variable decleared outside any function live here.
+// local scope:- variable declared inside a function live here
+// block scope:- variable decleared with let or const inside a block {} live here 
+
+
+
+// scope {}
+// global scope -> any one can acess
+let a = 10
+let b = 20
+var c = 30
+if (true) 
+{
+    // block scope
+   let a = 10
+   let b = 20
+   var c = 30 
+}
