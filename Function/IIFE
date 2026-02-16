@@ -1,0 +1,6 @@
+// Immediately Invoked Function Expression (IIFE)
+// why we use IIFe:- because global variable can create problem then we overcome this problem by using of IIFE.
+(function chai() {
+    // names iife
+    console.log(`DB CONNECTED`);
+}) ();
