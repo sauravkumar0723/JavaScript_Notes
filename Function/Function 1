@@ -1,0 +1,25 @@
+// Function decleration
+
+function greet(name) {
+    console.log(`Hi ${name}, welcome to hosiyar.com.....`);  
+}
+
+// calling the function
+greet('saurav');
+
+// calculate simple interest
+
+function calcSI(p,r,t)
+{
+    si = (p * r * t)/100
+    console.log("simple Interest=, ", si);
+}
+calcSI(10000, 2.5, 5);
+
+// Calculate sum
+function calcSum(n1,n2) {
+    sum = n1 + n2
+    return sum    // whenever return is there control will immediately leave and goes where it comes form
+}
+s = calcSum(20,30);
+console.log(`Sum = ${s}`);
