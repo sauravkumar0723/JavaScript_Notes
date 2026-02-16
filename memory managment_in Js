@@ -1,0 +1,99 @@
+JavaScript Memory Management – Diagrams
+1. Stack vs Heap
+                MEMORY IN JAVASCRIPT
+
+            ┌───────────────┐
+            │     STACK     │
+            ├───────────────┤
+            │ name = "JS"   │  → Primitive
+            │ age = 21      │  → Primitive
+            │ flag = true   │  → Primitive
+            └───────────────┘
+
+
+            ┌───────────────┐
+            │      HEAP     │
+            ├───────────────┤
+            │ {name:"JS"}   │  → Object
+            │ [1,2,3]       │  → Array
+            │ function(){}  │  → Function
+            └───────────────┘
+
+2. Reference Flow
+STACK                          HEAP
+
+user  ───────────────►   { name: "Saurav" }
+(ref variable)            (actual object)
+
+
+If:
+
+user = null;
+
+
+Then:
+
+STACK                          HEAP
+
+user = null              { name: "Saurav" }   → Eligible for GC
+
+3. Garbage Collection – Mark & Sweep
+Step 1: Mark reachable objects
+
+        Global
+           │
+           ▼
+        user ─────► {data}
+
+Step 2: Unreachable objects
+
+        {oldData}   ← not referenced
+
+Step 3: Sweep
+
+        {oldData}   → removed from memory
+
+4. Memory Life Cycle
+1. Allocation
+      ↓
+2. Use
+      ↓
+3. Garbage Collection
+
+5. Closure Memory Behavior
+function outer() {
+   let data = "large data";
+
+   return function inner() {
+      console.log("Hi");
+   }
+}
+
+outer() → inner still holds reference to data
+
+STACK                  HEAP
+
+inner  ───────────►  outer scope → data (not garbage collected)
+
+6. WeakMap Memory Advantage
+Normal Map
+
+key ─────► object   (not garbage collected)
+
+
+WeakMap
+
+key (removed)  
+
+object  → automatically garbage collected
+
+Minimal One-Diagram Revision
+                JAVASCRIPT MEMORY
+
+        STACK                      HEAP
+   ┌─────────────┐          ┌──────────────┐
+   │ Primitives  │          │ Objects      │
+   │ References ───────────► Actual Data  │
+   └─────────────┘          └──────────────┘
+
+Unreachable Object → Garbage Collector → Removed
