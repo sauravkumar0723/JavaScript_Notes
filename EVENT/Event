@@ -1,0 +1,62 @@
+What is an Event?
+
+-- An event is an action that happens in the browser.
+Examples:
+Button click
+Key press
+Mouse movement
+Page load
+Form submit
+JavaScript allows us to respond to these actions.
+
+Common JavaScript Events
+Event	Description
+click	When an element is clicked
+dblclick	Double click
+mouseover	Mouse enters element
+mouseout	Mouse leaves element
+keydown	Key is pressed
+keyup	Key is released
+submit	Form submission
+change	Input value changes
+load	Page fully loaded
+Ways to Add Events
+1. Inline Event (Not Recommended)
+<button onclick="alert('Clicked')">Click</button>
+
+2. Using DOM Property
+const btn = document.getElementById("btn");
+
+btn.onclick = function () {
+  alert("Clicked");
+};
+
+3. Using addEventListener() (Best Method)
+const btn = document.getElementById("btn");
+btn.addEventListener("click", function () {
+  alert("Clicked");
+});
+
+--- Why addEventListener is Best?
+- Allows multiple events on same element
+Cleaner and professional
+Better control (removeEventListener available)
+Example: Change Text on Click
+<button id="btn">Click Me</button>
+<script>
+  const btn = document.getElementById("btn");
+
+  btn.addEventListener("click", function () {
+    btn.textContent = "Clicked!";
+  });
+</script>
+
+Event Object
+
+When an event occurs, JavaScript creates an event object.
+
+btn.addEventListener("click", function (event) {
+  console.log(event);
+});
+
+
