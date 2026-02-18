@@ -1,0 +1,53 @@
+# Document Object Model
+- Representation of HTML Document in the form of object model in  JavaScript by using Dom- tree is known as DOM(Document object model)
+- it is a structured representation of a webpages.
+- programming interface for web development.
+- Dom represent document as nodes and objects that the way programming can interact with the webpages.
+
+Selecting Elements
+document.getElementById("id")
+document.getElementsByClassName("class")
+document.getElementsByTagName("tag")
+
+document.querySelector("cssSelector")
+document.querySelectorAll("cssSelector")
+
+
+1. document.getElementById("id")
+
+. Selects a single element using its unique id.
+. Returns one element object (or null if not found).
+
+2. document.getElementsByClassName("class")
+
+. Selects all elements with the given class name.
+. Returns a live HTMLCollection (updates automatically).
+
+3. document.getElementsByTagName("tag")
+
+. Selects all elements with the specified HTML tag.
+. Returns a live HTMLCollection of matching elements.
+
+4. document.querySelector("cssSelector")
+
+. Selects the first element that matches a CSS selector.
+. Supports #id, .class, tag, and complex selectors.
+
+5. document.querySelectorAll("cssSelector")
+
+. Selects all matching elements using a CSS selector.
+. Returns a static NodeList (does not auto-update).
+
+### Modifying Content
+- innerHTML
+- textContent
+
+### Styling
+- element.style.property
+
+### Creating Elements
+- createElement()
+- appendChild()
+
+### Events
+- addEventListener()
