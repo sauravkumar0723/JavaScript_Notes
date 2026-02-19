@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>events in js</title>
+    <style>
+        #box {
+            height: 100px;
+            width:100px;
+            background-color: aqua;
+            border: 6px solid blue;
+        }
+    </style>
+</head>
+<body>
+    <div id="box"></div>
+    <p id="text">Output</p>
+    <input type="text" id="ip">
+    <h1 id="Output">:)</h1>
+    <script>
+        // mouse
+        // click-event
+        const box = document.getElementById("box");
+        box.addEventListener("click",() =>{
+            box.style.backgroundColor = "red";
+        });
+        //double-click
+        // const box1 = document.getElementById("box");
+        box.addEventListener("dblclick",() => {
+            box.style.backgroundColor = "yellow";
+        });
+
+        //mouseOver
+        // const box2 = documnet.getElementById("box");
+        box.addEventListener("mouseover",() => {
+            alert("You hovered on box");
+            box.style.backgroundColor = "green";
+        });
+
+        // mouseout
+        //  const box3 = document.getElementById("box");
+        box.addEventListener("mouseout",() => {
+            box.style.backgroundColor = "pink";
+        });
+
+        //  const box4 = document.getElementById("box");
+        box.addEventListener("mousemove",() => {
+            box.style.color = "orange";
+        });
+
+        // keyboardvents
+        const op = document.getElementById("ip");
+        op.addEventListener("keydown", (e) => {
+            // op.textContent = `The key pressed is ${e.key}`;
+            console.log(`Key pressed (keydown): ${e.key}`);
+        });
+
+         op.addEventListener("keyup", (e) => {
+            // op.textContent = `The key pressed is ${e.key}`;
+            console.log(`Key released (keyup): ${e.key}`);
+        });
+
+        op.addEventListener("keypress", (e) => {
+            // op.textContent = `The key pressed is ${e.key}`;
+            console.log(`Key press (press): ${e.key}`);
+        });
+
+        // forms
+        
+    </script>
+</body>
+</html>
