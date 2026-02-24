@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form events</title>
+</head>
+<body>
+    <h1>Form & Input Events Demo</h1>
+    <form id="myForm">
+    <label>Enter your name:</label> <br> 
+    <input id="myInput" type="text" text="Type" placeholder="Type something...." name="usernamer">
+    <br>
+    <br>
+    <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        //submit
+        document.querySelector('#myForm').addEventListener('submit', (event) => {
+            alert('Form submitted!');
+            event.preventDefault();
+        });
+
+        // change
+        document.querySelector('#myInput').addEventListener('change', (event) => {
+            alert(`Input changed to: ${event.target.value}`);
+        });
+
+        // focus
+        document.querySelector('myInput').addEventListener('focus', () => {
+            console.log('Input field focused');
+        });
+
+        //blur
+        document.querySelector('myInput').addEventListener('blur', ()=> {
+            console.log('Input field lost focus!');
+        });
+
+        // Input
+        document.querySelector('myInput').addEventListener('input', (event) => {
+            console.log(`Current value: ${event.target.vaue}`);
+        });
+    </script>
+</body>
+</html>
